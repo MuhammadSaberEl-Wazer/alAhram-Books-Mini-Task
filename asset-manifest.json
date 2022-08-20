@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/alAhram-Books-Mini-Task/static/css/main.8fa7052a.css",
+    "main.js": "/alAhram-Books-Mini-Task/static/js/main.956bc851.js",
+    "static/js/787.9d3fae73.chunk.js": "/alAhram-Books-Mini-Task/static/js/787.9d3fae73.chunk.js",
+    "static/media/show-pic.png": "/alAhram-Books-Mini-Task/static/media/show-pic.6ae95084e5eab40bba0f.png",
+    "static/media/scattered-forcefield.png": "/alAhram-Books-Mini-Task/static/media/scattered-forcefield.bad213b43f9fbe06b378.png",
+    "index.html": "/alAhram-Books-Mini-Task/index.html",
+    "main.8fa7052a.css.map": "/alAhram-Books-Mini-Task/static/css/main.8fa7052a.css.map",
+    "main.956bc851.js.map": "/alAhram-Books-Mini-Task/static/js/main.956bc851.js.map",
+    "787.9d3fae73.chunk.js.map": "/alAhram-Books-Mini-Task/static/js/787.9d3fae73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8fa7052a.css",
+    "static/js/main.956bc851.js"
+  ]
+}
