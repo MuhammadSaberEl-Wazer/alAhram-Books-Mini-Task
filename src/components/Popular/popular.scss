@@ -1,0 +1,82 @@
+.popular {
+  width: 100%;
+  .popular-cont {
+    display: flex;
+    flex-direction: column;
+    // width: 95%;
+    margin: auto;
+
+    .popular-one {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 95%;
+      margin: auto;
+      height: 3rem;
+
+      .popular-one-left-h4 {
+        font-size: 1.4rem;
+        font-weight: 500;
+      }
+
+      .popular-one-right-a {
+        font-weight: 400;
+        color: #777;
+      }
+    }
+
+    .popular-two {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .pagination {
+      display: flex;
+      flex-direction: row;
+      margin: 2rem 0rem;
+
+      .pagi-items {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 40%;
+        margin: auto;
+
+        .item-left {
+          background-color: #111;
+          padding: 0.125rem 0.8rem;
+          border-radius: 0.25rem;
+          font-weight: 300;
+          color: white;
+          font-size: 0.9rem;
+        }
+
+        .item-middle .middle-btn {
+          margin: 0rem 1rem;
+          font-weight: 300;
+          background-color: #111;
+          padding: 0.125rem 0.4rem;
+          border-radius: 0.2rem;
+          color: white;
+          font-size: 0.9rem;
+        }
+
+        .item-right {
+          background-color: #111;
+          padding: 0.125rem 0.8rem;
+          border-radius: 0.25rem;
+          font-weight: 300;
+          color: white;
+          font-size: 0.9rem;
+        }
+      }
+
+      .pagi-items > * {
+        margin: 0rem 0.5rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 95%;
+ 
+  margin: auto;
+
+  .show-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+  .Popular-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+}

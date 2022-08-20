@@ -1,0 +1,117 @@
+.nav-bar {
+  display: flex;
+  flex-direction: column;
+
+  .nav-layer-one {
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    .nav-layer-one-cont {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .nav-layer-one-left {
+        .main-title {
+          font-weight: 500;
+          font-size: 1.3rem;
+          color: #333;
+        }
+      }
+
+      .nav-layer-one-middle {
+        .search-bar-with-icon {
+          position: relative;
+          left: 0px;
+
+          input {
+            width: 35rem;
+            background-color: #f5f7f8;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            height: 2.2rem;
+            border-radius: 0.25rem;
+            padding: 1rem 1.2rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+          }
+          i {
+            position: absolute;
+            left: 250px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #777;
+          }
+        }
+      }
+
+      .nav-layer-one-right {
+        display: flex;
+        flex-direction: row;
+
+        > * {
+          margin: 1rem;
+        }
+
+        a {
+          .fa-heart {
+            color: #413b89;
+          }
+
+          .number {
+            font-style: normal;
+            background-color: #413b89;
+            color: #eee;
+            padding: 0.25rem 0.75rem;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-layer-two {
+    // background-color: #eee;
+    // border-bottom: 1px solid black;
+    height: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-layer-two-middle {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 25rem;
+
+      a {
+        font-size: 1rem;
+        color: #999;
+        cursor: pointer;
+      }
+      a.activeA {
+        color: #333;
+        position: relative;
+      }
+
+      a.activeA::after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #999;
+        position: absolute;
+        left: 50%;
+        top: 140%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
