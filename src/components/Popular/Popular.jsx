@@ -3,7 +3,7 @@ import OneBookPopular from "../OneBookPopular/OneBookPopular";
 import "./popular.scss";
 
 const Popular = (props) => {
-  let { posts, getPagi } = props;
+  let { posts, getPagi, NoOfPagi } = props;
   const [items, setItems] = useState();
   const [selectedItems, setselectedItems] = useState();
   const [dispp, setdispp] = useState("unset");
@@ -30,11 +30,29 @@ const Popular = (props) => {
     (e) => {
       if (items) {
         setselectedItems(items);
-        setdispp("none")
+        setdispp("none");
       }
     },
     [items]
   );
+
+  useEffect(() => {
+    let allPagiEles =document.getElementsByClassName("item-middle")[0].childNodes;
+    let i;
+    console.log(allPagiEles,allPagiEles[0]);
+    if (allPagiEles) {
+      if (NoOfPagi) {
+        for (i = 0; i < allPagiEles.length ; i++) {
+          allPagiEles[i].classList.remove("selectedPagi");
+        }
+        // allPagiEles.map((ele) => {
+        //   ele.classList.remove("selectedPagi");
+        // });
+
+        allPagiEles[NoOfPagi - 1].classList.add("selectedPagi");
+      }
+    }
+  }, [NoOfPagi]);
 
   // useEffect(() => {
   //   if (items) {

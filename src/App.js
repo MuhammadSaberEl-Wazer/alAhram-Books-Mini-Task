@@ -24,11 +24,15 @@ function App() {
       let x = e.target.value;
 
       if (x == "next") {
-        let newNum = NoOfPagi + 1;
-        setNoOfPagi(newNum);
+        if (NoOfPagi != 5) {
+          let newNum = NoOfPagi + 1;
+          setNoOfPagi(newNum);
+        }
       } else if (x == "prev") {
-        let newNum = NoOfPagi - 1;
-        setNoOfPagi(newNum);
+        if (NoOfPagi != 1) {
+          let newNum = NoOfPagi - 1;
+          setNoOfPagi(newNum);
+        }
       } else {
         setNoOfPagi(e.target.value);
       }
@@ -42,7 +46,7 @@ function App() {
     <section className="app">
       <Navbar />
 
-      <Home posts={posts} getPagi={getPagi} />
+      <Home posts={posts} getPagi={getPagi} NoOfPagi={NoOfPagi} />
       {/* <h1 className="text-3xl font-bold underline text-red-200">
         Hello world!
       </h1> */}
