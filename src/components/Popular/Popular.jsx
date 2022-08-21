@@ -6,6 +6,7 @@ const Popular = (props) => {
   let { posts, getPagi } = props;
   const [items, setItems] = useState();
   const [selectedItems, setselectedItems] = useState();
+  const [dispp, setdispp] = useState("unset");
 
   useEffect(() => {
     if (posts) {
@@ -25,11 +26,15 @@ const Popular = (props) => {
     }
   }, [posts]);
 
-  const getAll = useCallback(() => {
-    if (items) {
-      setselectedItems(items);
-    }
-  }, [items]);
+  const getAll = useCallback(
+    (e) => {
+      if (items) {
+        setselectedItems(items);
+        setdispp("none")
+      }
+    },
+    [items]
+  );
 
   // useEffect(() => {
   //   if (items) {
@@ -46,7 +51,11 @@ const Popular = (props) => {
             <h4 className="popular-one-left-h4">Popular Now</h4>
           </div>
           <div className="popular-one-right">
-            <button className="popular-one-right-a" onClick={getAll}>
+            <button
+              className="popular-one-right-a"
+              onClick={(e) => getAll(e)}
+              style={{ display: `${dispp}` }}
+            >
               View all
             </button>
           </div>
@@ -65,13 +74,19 @@ const Popular = (props) => {
               );
             })
           ) : (
-            <p></p>
+            <div class="spinner-border m-auto" role="status">
+              <span class="visually-hidden m-auto">Loading...</span>
+            </div>
           )}
         </div>
         <div className="pagination" style={{}}>
           <div className="pagi-items">
             <div className="item-left">
-              <button className="prev-btn" value="prev" onClick={(e) => getPagi(e)}>
+              <button
+                className="prev-btn"
+                value="prev"
+                onClick={(e) => getPagi(e)}
+              >
                 Previous
               </button>
             </div>
@@ -113,7 +128,11 @@ const Popular = (props) => {
               </button>
             </div>
             <div className="item-right">
-              <button className="next-btn" value="next" onClick={(e) => getPagi(e)}>
+              <button
+                className="next-btn"
+                value="next"
+                onClick={(e) => getPagi(e)}
+              >
                 Next
               </button>
             </div>
